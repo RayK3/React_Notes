@@ -1,0 +1,11 @@
+The Component Lifecycle:
+  constructor(): called whenever a component is created
+  render(): called whenever the component is rendered
+  componentDidMount(): called after a component is mounted to the dom
+    - This is where AJAX calls normally sit
+  componentDidUpdate(): called after a component is updated
+  componentWillUnmount(): called right before a component is unmounted from the dom
+  
+  Props main job is to pass down a state from a parent component to a child.
+  
+  If you have state, or a lifecycle event stored in your component, then you need to use a class
