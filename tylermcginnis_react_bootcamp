@@ -8,4 +8,24 @@ The Component Lifecycle:
   
   Props main job is to pass down a state from a parent component to a child.
   
-  If you have state, or a lifecycle event stored in your component, then you need to use a class
+  If you have state, or a lifecycle event stored in your component, then you need to use a class.
+  If the component always looks or acts the same, then it doesn't need state, and can be functional. 
+
+React Router:
+  Static Routing: When you declare your routes statically as part of your app's initialization.
+  Dynamic Routing: Routing that takes place as your app is rendering
+  
+  You only need Browser Router once, at the route of your application.
+  
+  - match.path includes the query parameters, so it is dynamic. You want to use this in 
+  dynamic routes.
+  
+  - match.url is the actual url, so it is not dynamic. You want to use this in links
+  
+  Examples of routing:
+    <Route path={`${match.path}/:topicId`} component={Topic} />
+      <Route exact path={match.path} render={() => {
+        return <h3>Please select a topic</h3>
+      }} />
+      
+    - In the rendering, you can also render a component and send it a prop. 
